@@ -1,0 +1,256 @@
+ apos a instalação do git, tem que colocar o usuario
+abra o terminal
+
+pwd
+
+ls -a mostra arquivos ocultos
+
+git config --global user.name "julivansoares"
+
+git config --global user.email "julivan_hard@hotmail.com"
+
+apos isso
+
+coloca novamente o comando(ls -a) e verifica se o arquivo  .gitconfig foi criado.
+
+verificar se o usuario e email estão corretos
+nano .gitconfig
+
+git init //inicia a linha do tempo
+
+git add adiciona ou atualiza mudanças para irem para linha do tempo EX(git add tegs.html) adiciono esse projeto ao meu novo repositorio
+////////////////////////////////////////////////////////////////////////
+
+git commit adiciona um ponto na linha do tempo
+
+EX(git commit -m "primeira parte do projeto") toda vez que adcionar o novo projeto dou um commit -m "coloco uma descrição dessa parte do projeto"
+
+///////////////////////////////////////////////////////////
+
+git log// visualiza os ponto na linha do tempo dos commit
+//////////////////////////////////////////////////////////////
+
+
+git status // informa o estado das alteraçoes do projeto
+
+se eu fizer qualquer tipo de alteração no meu projeto  e dar um git status vai constar como arquivo modificado, dessa forma terei que dar um (git add tegs.html)
+
+porque se eu der um commit irei sobre escrever a primeira modificação no projeto então adciono o projeto novamente com essa alteração pois se as alteração der erro posso recuperar a ultima parte funcionando do projeto
+
+
+SE O PROJETO COM O GIT STATUS FOI ALTERADO
+
+git add tegs.html
+
+DEPOIS 
+
+GIT COMMIT -M "DESCRIÇÃO DA NOVA ALTERAÇÃO"
+
+
+GIT LOG VERIFICA SE FOI FEITO O NOVO PONTO DE ATUALISAÇÃO NO REPOSIOTORIO
+
+//////////////////////////////////////////////////////////////////////////////////////
+quan vc der o comando git log vai aparecer os commits que vc deu no seu codigo vc copia o codigo do comit que vc quer vê e ele vai mostrar a alteração feita 
+EXEPLO A BAIXO
+
+git  show f6fab9c3295f4fcd3ce1e2c1ef88d62ab50f6acc //apresenta determinado ponto na historia
+////////////////////////////////////////////////////////////////
+git show  se  VC QUISER VÊ A ULTIMA ATUALIZAÇÃO 
+
+
+
+///////////////////////////////////////////////////////////////////////////
+se quiser adcionar uma nova LINHA DO TEMPO ao projeto separado da priMEIRA 
+utiliza git branch  "nome da nova linha do tempo"
+
+git branch  pagina2
+
+/////////////////////////////////////////////////////////
+
+para entrar nessa nova LINHA DO TEMPO
+
+
+git checkout pagina2
+
+depois 
+
+git status
+
+verificar se está na segunda parte
+
+
+AGORA VAMOS CRIAR A PARTE 2 DO PROJETO
+
+touch nome da nova parte.exterção desse aquivo
+
+EX
+
+TOUCH PAGINA.HTML
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+para voltar a outra linha do tempo
+
+git checkout (nome da outra linha do tempo)
+
+git checkout master
+
+//////////////////////////////////////////////////////////////
+
+para verificar em qual linha do tempo estou
+
+git branch
+
+///////////////////////////////////////////////////
+
+PARA ADCIONAR UMA NOVA PARTE DO PROJETO NA NOVA LINNHA
+
+
+
+GIT STATUS
+
+VERIFICO SE A PAGINA CRIADA ANTERIOMENTE ESTA APARECENDO
+
+
+AGORA DOU UM (GIT ADD PAGINA.HTML) COM O NOME DA PAGINA CRIADA NA MINHA NOVA LINHA DO TEMPO
+
+
+
+DEPOIS CRIO O PONTO NO TEMPO
+
+GIT COMMIT -M "PAGINA DOIS"
+
+
+AGORA GIT LOG (PARA VER ESSE PONTO NO TEMPO)
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+PARA JUNTA AS LINHAS DO TEMPO VOLTO PARA MINHA LINHA DO TEM PRINCIPAL NO CASO(git checkout master) agora
+
+verifico se está na minha linha principal(git branch) agora.
+
+
+          git merge (nome da linha do tempo) EX(  git merge pagina2)
+
+
+
+
+
+AGORA DOU UM GIT LOG 
+
+
+GIT LOG  para verificar se deu certo
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+      PARA DELETAR A BRANCH, DEPOIS DE TER JUNTATO A PARTE2 DO PROJETO A LINHA PRINCIPAL 
+
+
+
+git branch -D nome da linha do tempo que vc quer apagar     EX(git branch -D pagina2
+)
+
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+  AGORA PARA SUBIR  OS PROJETOS PARA A CONTA DO GIT
+
+
+primeiro abro meu git crio o repositorio a onde irar ficar meu projeto e copio o link desse repositorio
+
+git remote add origin https://github.com/julivansoares/PAGINAS-HTML
+
+
+///////////////
+
+agora posso subir meus projetos para o git
+
+git push -u origin master
+
+///////////////////////////////////////////////////
+    EM VEZ DA SENHA AGORA É O TOKEN 
+ SEMPRE VERIFICA SE O SEU NÃO EXPIROU
+
+Criar token de acesso pessoal no GitHub
+Em sua conta do GitHub, vá para Configurações => Configurações do desenvolvedor => Token de acesso pessoal => Gerar novo token (forneça sua senha) => Preencha o formulário => clique em Gerar token => Copiar o token gerado , será algo
+
+toke_letmeask=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  
+
+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
+
+DEPOIS QUE EU FIZER ESSE PASSO A CIMA SEMPRE QUER QUISER SUBIR UM PROJETO PARA ESSE REPOSITORIO É SÓ(GIT PUSH)
+
+GIT PUSH
+
+
+/////////////////////////////////////////////////////////////////
+SE ESTIVER TRABALHANDO EM EQUIPE E ALGUEM FAZER UMA ATUALIZAÇÃO NO PROJETO
+
+TENHO QUE PUXAR ESSA ATUALIZAÇÃO PARA DEPOIS SUBIR A MINHA POS PRECISAR VERIFICAR SE COM ESSA NOVA ATUALIZAÇÃO SUA MUDANÇA NÃO VAI ENTRAR EM CONFLITO
+
+
+git pull // puxa do repositório remoto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+git init // inicia a linha do tempo
+git add // adiciona ou atualiza mudanças para irem para a linha do tempoo
+git commit // adiciona um ponto na linha do tempo
+git log // visualiza os pontos na linha do tempo / commit
+git status // informa o estado das alterações do nosso projeto
+git show // apresenta determinado ponto na história
+git branch // gerenciar novas linhas do tempo
+git checkout // manipula as linhas do tempo
+git merge // unir linhas do tempo
+git push // envia alterações locais para o repositório remoto
+git clone // clonar um projeto / repositório
+git pull // puxa do repositório remoto
+
+
+
+paralax=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
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
